@@ -1,0 +1,76 @@
+Hello! I need you to create a Next.js application called "AirAware". Please follow these instructions carefully to ensure the structure and functionality are correct.
+
+1. Tech Stack
+
+The application must use the following technologies:
+
+Framework: Next.js with the App Router.
+Language: TypeScript.
+Styling: Tailwind CSS, configured for a dark theme by default.
+UI Components: ShadCN UI. Please use the following components: Card, Button, Input, Label, Select, Dialog, Sheet, Avatar, Toast, Accordion, Tabs, and Skeleton.
+Icons: lucide-react.
+Charts: recharts.
+AI Integration: Genkit for connecting to the Gemini model.
+Dependencies: also include class-variance-authority, clsx, tailwind-merge, tailwindcss-animate, react-markdown.
+2. Project Structure & File Content
+
+Please create the following file structure and use the exact code provided for each file.
+
+Root Files:
+
+next.config.ts
+tailwind.config.ts
+postcss.config.js
+components.json (for ShadCN)
+package.json (listing all dependencies from the tech stack)
+README.md
+/src Directory:
+
+src/lib/utils.ts
+src/lib/data.ts
+src/lib/types.ts
+src/hooks/use-toast.ts
+src/hooks/use-mobile.tsx
+src/contexts/app-context.tsx
+/src/app Directory (App Router):
+
+src/app/globals.css (with dark theme HSL variables)
+src/app/layout.tsx (Root layout)
+src/app/page.tsx (Dashboard page)
+src/app/login/page.tsx
+src/app/details/page.tsx
+src/app/advisory/page.tsx
+src/app/sensitivity/page.tsx
+src/app/cities/page.tsx
+src/app/explained/page.tsx
+src/app/profile/page.tsx
+API Routes:
+
+src/app/api/aqi/route.ts
+src/app/api/search/route.ts
+AI Files (/src/ai):
+
+src/ai/genkit.ts (Genkit configuration)
+src/ai/flows/assistant.ts (The main assistant flow)
+Component Files (/src/components):
+
+src/components/logo.tsx
+src/components/layout/app-shell.tsx
+src/components/layout/bottom-navigation.tsx
+src/components/layout/location-selector.tsx
+src/components/layout/page-header.tsx
+src/components/dashboard/aqi-chart.tsx
+src/components/dashboard/aqi-trend-chart.tsx
+src/components/dashboard/indoor-outdoor-card.tsx
+src/components/assistant/chat-assistant.tsx
+ShadCN UI Files (/src/components/ui):
+
+Please generate all the ShadCN UI component files as per the list in the tech stack.
+3. Core Functionality to Implement
+
+Authentication: A simple, non-secure login system that stores user info (name) in localStorage. The app should be wrapped in an AuthGuard that shows a LoginPage if the user is not "logged in".
+Data Fetching: The AppContext should manage fetching data from the /api/aqi route when a city is selected. It should handle loading states.
+State Management: Use a React Context (AppContext) to manage global state like the selected city, user information, and health profile settings.
+Routing: The app should have a sidebar for navigation on desktop and a bottom navigation bar on mobile.
+AI Assistant: Implement a floating action button that opens a chat sheet. The chat should use Genkit and the Gemini model to answer user questions based on the current AQI data and the user's health profile.
+Please proceed by creating the files with their corresponding content, starting with the configuration files (package.json, tailwind.config.ts, etc.) and then building out the application structure. Thank you!
