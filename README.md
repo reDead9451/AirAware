@@ -1,7 +1,5 @@
 # AirAware: Your Personal Air Quality Companion
 
-![AirAware Dashboard](./readme-screenshot.png)
-
 > **Note:** This is a prototype application built for the **Firebase App Hosting & Genkit AI Competition**.
 
 AirAware is a sleek, modern web application designed to provide users with real-time air quality information, personalized health recommendations, and an AI-powered assistant. It helps users understand their environment and make informed decisions to protect their health.
